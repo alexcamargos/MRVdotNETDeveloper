@@ -59,7 +59,31 @@ namespace Revisao
                         }
 
                         var mediaGeral = notaTotal / nrAlunos;
-                        Console.WriteLine($"MÉDIA GERAL: {mediaGeral}");
+                        ConceitoEnum conceitoGeral;
+
+                        if (mediaGeral <= 2)
+                        {
+                            conceitoGeral = ConceitoEnum.E;
+                        }
+                        else if (mediaGeral <= 4)
+                        {
+                            conceitoGeral = ConceitoEnum.D;
+                        }
+                        else if (mediaGeral <= 6)
+                        {
+                            conceitoGeral = ConceitoEnum.C;
+                        }
+                        else if (mediaGeral <= 8)
+                        {
+                            conceitoGeral = ConceitoEnum.B;
+                        }
+                        else
+                        {
+                            conceitoGeral = ConceitoEnum.A;
+                        }
+
+                        Console.WriteLine($"MÉDIA GERAL: {mediaGeral} - CONCEITO GERAL: {conceitoGeral}");
+                        Console.WriteLine();
 
                         break;
                     default:
